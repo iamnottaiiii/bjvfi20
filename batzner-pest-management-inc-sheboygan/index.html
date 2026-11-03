@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batzner Pest Management Inc, Sheboygan, WI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* sticky-footer-fix-v1 */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Merriweather',Georgia,serif;background:#f4fafb;color:#173f49;min-height:100dvh;display:flex;flex-direction:column}
+.bg2{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg2 svg{width:100%;height:100%;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes rise{0%{transform:translateY(0)}100%{transform:translateY(-46px)}}
+@keyframes flow{to{stroke-dashoffset:-160}}
+.anim-spin{animation:spin 110s linear infinite}
+.anim-drift{animation:drift 9s ease-in-out infinite}
+.anim-rise{animation:rise 7s ease-in-out infinite alternate}
+.anim-flow{animation:flow 9s linear infinite}
+main{flex:1;width:100%;max-width:1060px;margin:0 auto;padding:30px 22px 44px}
+.page{display:none}.page.on{display:block}
+.hero h1{font-family:'Oswald',Georgia,serif;font-weight:600;font-size:clamp(31px,6vw,48px);line-height:1.16;color:#173f49;max-width:720px}
+.hero p{font-size:16.5px;line-height:1.7;color:#173f49;opacity:.86;margin-top:16px;max-width:680px}
+.tagline{font-size:13.5px;letter-spacing:2.5px;color:#84a7b0;text-transform:uppercase;margin-bottom:14px}
+.call{display:inline-block;margin-top:24px;background:#0e7c93;color:#fff;font-size:17px;padding:13px 26px;border-radius:9px;text-decoration:none}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:40px}
+.cols h3{font-family:'Oswald',Georgia,serif;font-size:20px;color:#0e7c93;margin-bottom:8px}
+.cols p{font-size:15.5px;line-height:1.65;color:#173f49;opacity:.84}
+h2.page-title{font-family:'Oswald',Georgia,serif;font-weight:600;font-size:clamp(27px,4.6vw,38px);color:#173f49;margin-top:10px}
+.sub{font-size:16.5px;line-height:1.7;color:#173f49;opacity:.86;max-width:660px;margin-top:10px}
+.item{padding:18px 0;max-width:720px}
+.item h3{font-size:17.5px;margin-bottom:5px;color:#173f49}
+.item p{font-size:15.5px;line-height:1.65;color:#173f49;opacity:.84}
+.addr{font-size:clamp(19px,3vw,25px);line-height:1.6;margin-top:18px}
+.steps{counter-reset:st;max-width:680px;margin-top:8px}
+.steps li{list-style:none;font-size:16px;line-height:1.65;color:#173f49;opacity:.88;padding:12px 0 12px 6px}
+footer{margin-top:auto;text-align:center;padding:20px 10px 24px;font-size:13.5px;color:#84a7b0}.burger{position:fixed;top:14px;right:14px;z-index:40;width:46px;height:46px;border-radius:12px;border:none;background:#0e7c93;color:#fff;font-size:21px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.2)}.drawerwrap{position:fixed;inset:0;z-index:39;display:none}.drawerwrap.open{display:block}.drawer-bg{position:absolute;inset:0;background:rgba(15,12,8,.45)}.drawer{position:absolute;top:0;bottom:0;right:0;width:min(290px,82vw);background:rgba(244,250,251,0.38);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);padding:26px 22px}.drawer button,.drawer a{display:block;width:100%;text-align:left;background:none;border:none;color:#173f49;font-size:18px;padding:13px 4px;cursor:pointer;text-decoration:none}.drawer button.on{color:#0e7c93;font-weight:700}
+</style>
+</head>
+<body>
+<div class="bg2"><svg viewBox="0 0 400 840" preserveAspectRatio="xMidYMid slice"><circle cx="200" cy="402" r="148" fill="#0e7c93" opacity=".10"/><circle cx="200" cy="402" r="148" fill="none" stroke="#0e7c93" stroke-width="4" opacity=".18"/><g class="anim-rise" fill="#0e7c93"><circle cx="120" cy="700" r="13" opacity=".30"/><circle cx="268" cy="762" r="9" opacity=".26"/><circle cx="318" cy="662" r="15" opacity=".22"/><circle cx="80" cy="580" r="8" opacity=".28"/></g><g fill="#0e7c93"><circle cx="156" cy="368" r="10" opacity=".24"/><circle cx="238" cy="342" r="13" opacity=".20"/><circle cx="206" cy="430" r="9" opacity=".24"/></g></svg></div>
+<button class="burger" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="drawerwrap" id="menu"><div class="drawer-bg" onclick="toggleMenu()"></div><div class="drawer"><button type="button" data-nav="home" onclick="go('home')">Home</button><button type="button" data-nav="services" onclick="go('services')">Services</button><button type="button" data-nav="about" onclick="go('about')">About</button><button type="button" data-nav="area" onclick="go('area')">Service Area</button></div></div>
+<main>
+<section class="page on" id="home"><p class="tagline">Cleaning service · Sheboygan, WI</p><div class="hero"><h1>Welcome to Batzner Pest Management Inc</h1><p>Batzner Pest Management Inc serves Sheboygan as a cleaning service. What brings people in is a warm welcome, straight answers and things done the way they were promised.</p><p>The work happens at your place, not ours. Call (920) 208-6610 and what you need gets talked through, priced plainly and scheduled at a time that suits your day.</p><a class="call" href="tel:+19202086610">Call (920) 208-6610</a></div><div class="cols"><div><h3>Offices and workplaces</h3><p>Common areas, desks and restrooms kept presentable, scheduled around your working hours.</p></div><div><h3>Regular cleaning</h3><p>Homes and workplaces cleaned on a schedule that fits, with the same care on the tenth visit as the first.</p></div><div><h3>Deep cleaning</h3><p>The top to bottom clean: kitchens, bathrooms, floors and the corners regular cleaning never reaches.</p></div></div></section>
+<section class="page" id="services"><h2 class="page-title">Services</h2><p class="sub">What Batzner Pest Management Inc does, in plain terms. If you need something close to what is listed here but not exactly it, call and ask. That conversation is always welcome.</p><div class="item"><h3>Offices and workplaces</h3><p>Common areas, desks and restrooms kept presentable, scheduled around your working hours.</p></div><div class="item"><h3>Regular cleaning</h3><p>Homes and workplaces cleaned on a schedule that fits, with the same care on the tenth visit as the first.</p></div><div class="item"><h3>Deep cleaning</h3><p>The top to bottom clean: kitchens, bathrooms, floors and the corners regular cleaning never reaches.</p></div><div class="item"><h3>Move in and move out</h3><p>Empty places left genuinely clean for the next chapter, landlords, sellers and new owners alike.</p></div></section>
+<section class="page" id="about"><h2 class="page-title">About</h2><p class="sub">Batzner Pest Management Inc is a cleaning service based in Sheboygan, WI. The work is exterminating and pest control services for the people and businesses of this area, done locally, by people who live with the reputation it earns them.</p><p class="sub">The approach here is straightforward. You call, explain what is going on at your place, and get a clear answer on what it involves and what it costs. The work is scheduled, done as agreed, and checked with you before anyone leaves.</p><p class="sub">Most people arrive by recommendation, or because they pass by and come in. However you found Batzner Pest Management Inc, the aim is the same: that you leave knowing you were looked after properly, and that you would come back without thinking twice.</p></section>
+<section class="page" id="area"><h2 class="page-title">Service area</h2><p class="sub">Batzner Pest Management Inc is based in Sheboygan, WI and serves Sheboygan and the communities around it. The service comes to you, at your home or your business.</p><ol class="steps"><li>Call and describe what you need. You get a straight answer on timing and what the visit involves.</li><li>The work is scheduled at a time that fits your day, and you know who is coming.</li><li>The job is done at your place, checked with you before anyone leaves.</li></ol><a class="call" href="tel:+19202086610">Call (920) 208-6610</a></section>
+</main>
+<footer>© Batzner Pest Management Inc</footer>
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.toggle('on', p.id === id); });
+  document.querySelectorAll('[data-nav]').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-nav') === id); });
+  var m = document.getElementById('menu'); if(m) m.classList.remove('open');
+  var bb = document.getElementById('backbtn'); if(bb) bb.classList.toggle('show', id !== 'home');
+  var hm = document.getElementById('homemenu'); if(hm) hm.style.display = (id === 'home') ? '' : 'none';
+  window.scrollTo(0, 0);
+}
+function toggleMenu(){ var m = document.getElementById('menu'); if(m) m.classList.toggle('open'); }
+document.addEventListener('click', function(e){
+  var d = document.querySelector('.drop.open');
+  if(d && !e.target.closest('.drop') && !e.target.closest('.dotsbtn')) d.classList.remove('open');
+});
+</script>
+</body>
+</html>

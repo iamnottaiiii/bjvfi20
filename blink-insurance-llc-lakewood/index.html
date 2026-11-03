@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blink Insurance LLC, Lakewood, WA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* sticky-footer-fix-v1 */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',Georgia,serif;background:#f4f6f8;color:#24313d;min-height:100dvh;display:flex;flex-direction:column}
+.bg2{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg2 svg{width:100%;height:100%;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes rise{0%{transform:translateY(0)}100%{transform:translateY(-46px)}}
+@keyframes flow{to{stroke-dashoffset:-160}}
+.anim-spin{animation:spin 110s linear infinite}
+.anim-drift{animation:drift 9s ease-in-out infinite}
+.anim-rise{animation:rise 7s ease-in-out infinite alternate}
+.anim-flow{animation:flow 9s linear infinite}
+main{flex:1;width:100%;max-width:1060px;margin:0 auto;padding:30px 22px 44px}
+.page{display:none}.page.on{display:block}
+.hero h1{font-family:'Anton',Georgia,serif;font-weight:600;font-size:clamp(31px,6vw,48px);line-height:1.16;color:#24313d;max-width:720px}
+.hero p{font-size:16.5px;line-height:1.7;color:#24313d;opacity:.86;margin-top:16px;max-width:680px}
+.tagline{font-size:13.5px;letter-spacing:2.5px;color:#8296a5;text-transform:uppercase;margin-bottom:14px}
+.call{display:inline-block;margin-top:24px;background:#2f5d7a;color:#fff;font-size:17px;padding:13px 26px;border-radius:9px;text-decoration:none}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:40px}
+.cols h3{font-family:'Anton',Georgia,serif;font-size:20px;color:#2f5d7a;margin-bottom:8px}
+.cols p{font-size:15.5px;line-height:1.65;color:#24313d;opacity:.84}
+h2.page-title{font-family:'Anton',Georgia,serif;font-weight:600;font-size:clamp(27px,4.6vw,38px);color:#24313d;margin-top:10px}
+.sub{font-size:16.5px;line-height:1.7;color:#24313d;opacity:.86;max-width:660px;margin-top:10px}
+.item{padding:18px 0;max-width:720px}
+.item h3{font-size:17.5px;margin-bottom:5px;color:#24313d}
+.item p{font-size:15.5px;line-height:1.65;color:#24313d;opacity:.84}
+.addr{font-size:clamp(19px,3vw,25px);line-height:1.6;margin-top:18px}
+.steps{counter-reset:st;max-width:680px;margin-top:8px}
+.steps li{list-style:none;font-size:16px;line-height:1.65;color:#24313d;opacity:.88;padding:12px 0 12px 6px}
+footer{margin-top:auto;text-align:center;padding:20px 10px 24px;font-size:13.5px;color:#8296a5}.rail{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:13px}.rail button{width:15px;height:15px;border-radius:50%;border:2px solid #2f5d7a;background:transparent;cursor:pointer;padding:0}.rail button.on{background:#2f5d7a}.rail a{width:15px;height:15px;border-radius:50%;background:#2f5d7a;display:block;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="bg2"><svg viewBox="0 0 400 840" preserveAspectRatio="xMidYMid slice"><path d="M200 180 l104 34 v120 q0 130 -104 190 q-104 -60 -104 -190 v-120z" fill="#2f5d7a" opacity=".13"/><path d="M166 330 l24 24 46 -52" fill="none" stroke="#2f5d7a" stroke-width="11" opacity=".30"/></svg></div>
+<nav class="rail"><button type="button" data-nav="home" title="Home" aria-label="Home" onclick="go('home')"></button><button type="button" data-nav="services" title="Services" aria-label="Services" onclick="go('services')"></button><button type="button" data-nav="about" title="About" aria-label="About" onclick="go('about')"></button><button type="button" data-nav="visit" title="Visit" aria-label="Visit" onclick="go('visit')"></button><a href="https://www.google.com/maps/place/Blink+Insurance+LLC/@47.169715499999995,-122.48466669999999,17z/data=!3m1!4b1!4m6!3m5!1s0x549101006c1ac64f:0x7bdc599d90130b04!8m2!3d47.169715499999995!4d-122.48466669999999!16s%2Fg%2F11wtqm3g02?entry=ttu" target="_blank" rel="noopener" title="Directions" aria-label="Directions"></a></nav>
+<main>
+<section class="page on" id="home"><p class="tagline">Insurance agency · Lakewood, WA</p><div class="hero"><h1>Welcome to Blink Insurance LLC</h1><p>This is Lakewood, WA's own insurance agency. At Blink Insurance LLC, the offer is simple: auto and home cover, business cover, handled by people who know the work and know this area.</p><p>You will find us at 3620 96th St S in Lakewood. Walk in during opening hours, or call ahead on (253) 308-2712 if you want something ready, booked or set aside for you.</p><a class="call" href="tel:+12533082712">Call (253) 308-2712</a></div><div class="cols"><div><h3>Auto and home cover</h3><p>Policies compared across carriers and explained in plain terms, what is covered, what is not, and what it really costs.</p></div><div><h3>Business cover</h3><p>Liability, property and the specific risks of your trade, arranged so a bad week does not become a bad year.</p></div><div><h3>Claims help</h3><p>When something happens, you call a person who knows your policy, not a call center queue.</p></div></div></section>
+<section class="page" id="services"><h2 class="page-title">Services</h2><p class="sub">What Blink Insurance LLC does, in plain terms. If you need something close to what is listed here but not exactly it, call and ask. That conversation is always welcome.</p><div class="item"><h3>Auto and home cover</h3><p>Policies compared across carriers and explained in plain terms, what is covered, what is not, and what it really costs.</p></div><div class="item"><h3>Business cover</h3><p>Liability, property and the specific risks of your trade, arranged so a bad week does not become a bad year.</p></div><div class="item"><h3>Claims help</h3><p>When something happens, you call a person who knows your policy, not a call center queue.</p></div><div class="item"><h3>Reviews</h3><p>Policies change as life does. A yearly look keeps cover matched to what you actually have and do.</p></div></section>
+<section class="page" id="about"><h2 class="page-title">About</h2><p class="sub">Blink Insurance LLC is a insurance agency based in Lakewood, WA. The work is insurance agencies and brokerages for the people and businesses of this area, done locally, by people who live with the reputation it earns them.</p><p class="sub">The approach here is straightforward. Things are explained in plain words, arrangements are kept, and people are treated the way the people here would want their own family treated.</p><p class="sub">Most people arrive by recommendation, or because they pass by and come in. However you found Blink Insurance LLC, the aim is the same: that you leave knowing you were looked after properly, and that you would come back without thinking twice.</p></section>
+<section class="page" id="visit"><h2 class="page-title">Visit</h2><p class="addr">3620 96th St S, Lakewood, WA 98499</p><p class="sub">Use Directions in the menu for the map. Calling ahead is wise if your visit matters.</p><a class="call" href="tel:+12533082712">Call (253) 308-2712</a></section>
+</main>
+<footer>© Blink Insurance LLC</footer>
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.toggle('on', p.id === id); });
+  document.querySelectorAll('[data-nav]').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-nav') === id); });
+  var m = document.getElementById('menu'); if(m) m.classList.remove('open');
+  var bb = document.getElementById('backbtn'); if(bb) bb.classList.toggle('show', id !== 'home');
+  var hm = document.getElementById('homemenu'); if(hm) hm.style.display = (id === 'home') ? '' : 'none';
+  window.scrollTo(0, 0);
+}
+function toggleMenu(){ var m = document.getElementById('menu'); if(m) m.classList.toggle('open'); }
+document.addEventListener('click', function(e){
+  var d = document.querySelector('.drop.open');
+  if(d && !e.target.closest('.drop') && !e.target.closest('.dotsbtn')) d.classList.remove('open');
+});
+</script>
+</body>
+</html>
