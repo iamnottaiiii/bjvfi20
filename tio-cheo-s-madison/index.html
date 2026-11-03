@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tio Cheo&#x27;s, Madison, WI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* sticky-footer-fix-v1 */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Zilla Slab',Georgia,serif;background:#fbf6ea;color:#33241a;min-height:100dvh;display:flex;flex-direction:column}
+.bg2{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg2 svg{width:100%;height:100%;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes rise{0%{transform:translateY(0)}100%{transform:translateY(-46px)}}
+@keyframes flow{to{stroke-dashoffset:-160}}
+.anim-spin{animation:spin 110s linear infinite}
+.anim-drift{animation:drift 9s ease-in-out infinite}
+.anim-rise{animation:rise 7s ease-in-out infinite alternate}
+.anim-flow{animation:flow 9s linear infinite}
+main{flex:1;width:100%;max-width:1060px;margin:0 auto;padding:30px 22px 44px}
+.page{display:none}.page.on{display:block}
+.hero h1{font-family:'Zilla Slab',Georgia,serif;font-weight:600;font-size:clamp(31px,6vw,48px);line-height:1.16;color:#33241a;max-width:720px}
+.hero p{font-size:16.5px;line-height:1.7;color:#33241a;opacity:.86;margin-top:16px;max-width:680px}
+.tagline{font-size:13.5px;letter-spacing:2.5px;color:#97835f;text-transform:uppercase;margin-bottom:14px}
+.call{display:inline-block;margin-top:24px;background:#9c3d1e;color:#fff;font-size:17px;padding:13px 26px;border-radius:9px;text-decoration:none}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:40px}
+.cols h3{font-family:'Zilla Slab',Georgia,serif;font-size:20px;color:#9c3d1e;margin-bottom:8px}
+.cols p{font-size:15.5px;line-height:1.65;color:#33241a;opacity:.84}
+h2.page-title{font-family:'Zilla Slab',Georgia,serif;font-weight:600;font-size:clamp(27px,4.6vw,38px);color:#33241a;margin-top:10px}
+.sub{font-size:16.5px;line-height:1.7;color:#33241a;opacity:.86;max-width:660px;margin-top:10px}
+.item{padding:18px 0;max-width:720px}
+.item h3{font-size:17.5px;margin-bottom:5px;color:#33241a}
+.item p{font-size:15.5px;line-height:1.65;color:#33241a;opacity:.84}
+.addr{font-size:clamp(19px,3vw,25px);line-height:1.6;margin-top:18px}
+.steps{counter-reset:st;max-width:680px;margin-top:8px}
+.steps li{list-style:none;font-size:16px;line-height:1.65;color:#33241a;opacity:.88;padding:12px 0 12px 6px}
+footer{margin-top:auto;text-align:center;padding:20px 10px 24px;font-size:13.5px;color:#97835f}.menubtn{position:fixed;top:14px;right:14px;z-index:40;border:none;background:#9c3d1e;color:#fff;font-size:16px;padding:11px 18px;border-radius:999px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.22)}.overlay{position:fixed;inset:0;z-index:41;background:rgba(251,246,234,0.38);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);display:none;padding:88px 30px 30px}.overlay.open{display:block}.overlay button,.overlay a{display:block;background:none;border:none;color:#33241a;font-family:Zilla Slab,serif;font-size:31px;padding:13px 0;cursor:pointer;text-decoration:none;text-align:left}.overlay button.on{color:#9c3d1e}.overlay .x{position:absolute;top:14px;right:14px;width:46px;height:46px;border-radius:50%;background:#9c3d1e;color:#fff;font-size:20px;text-align:center;padding:0}
+</style>
+</head>
+<body>
+<div class="bg2"><svg viewBox="0 0 400 840" preserveAspectRatio="xMidYMid slice"><circle cx="308" cy="168" r="84" fill="none" stroke="#9c3d1e" stroke-width="13" opacity=".20"/><circle cx="98" cy="612" r="58" fill="none" stroke="#9c3d1e" stroke-width="10" opacity=".16"/><g class="anim-drift" fill="none" stroke="#9c3d1e" stroke-width="7" stroke-linecap="round" opacity=".35"><path d="M150 330 q14 -34 0 -62 q-14 -28 0 -58"/><path d="M205 340 q14 -34 0 -62 q-14 -28 0 -58"/><path d="M260 330 q14 -34 0 -62 q-14 -28 0 -58"/></g><ellipse cx="205" cy="394" rx="118" ry="19" fill="#9c3d1e" opacity=".14"/></svg></div>
+<button class="menubtn" type="button" onclick="toggleMenu()">Menu ☰</button><div class="overlay" id="menu"><button class="x" type="button" onclick="toggleMenu()" aria-label="Close">✕</button><button type="button" data-nav="home" onclick="go('home')">Home</button><button type="button" data-nav="services" onclick="go('services')">Services</button><button type="button" data-nav="about" onclick="go('about')">About</button><button type="button" data-nav="visit" onclick="go('visit')">Visit</button><a href="https://www.google.com/maps/place/Tio+Cheo%27s/@43.0616286,-89.40104579999999,17z/data=!3m1!4b1!4m6!3m5!1s0x8807adbcb2a5098d:0x1c04240e69bca48!8m2!3d43.0616286!4d-89.40104579999999!16s%2Fg%2F11njw6n86g?entry=ttu" target="_blank" rel="noopener">Directions</a></div>
+<main>
+<section class="page on" id="home"><p class="tagline">Place to eat · Madison, WI</p><div class="hero"><h1>A place to eat in the heart of Madison</h1><p>This is Madison, WI's own place to eat. At Tio Cheo&#x27;s, the offer is simple: groups and occasions, made fresh daily, handled by people who know the work and know this area.</p><p>You will find us at 514 S Park St in Madison. Walk in during opening hours, or call ahead on (262) 744-8160 if you want something ready, booked or set aside for you.</p><a class="call" href="tel:+12627448160">Call (262) 744-8160</a></div><div class="cols"><div><h3>Groups and occasions</h3><p>Bigger orders and group meals handled with a bit of notice, so the food is ready when your people are.</p></div><div><h3>Made fresh daily</h3><p>The kitchen works from fresh ingredients prepped through the day, so what reaches the table tastes like it was meant to.</p></div><div><h3>Family friendly tables</h3><p>Room for the whole family, food that suits different tastes at one table, and service that keeps things easy.</p></div></div></section>
+<section class="page" id="services"><h2 class="page-title">Services</h2><p class="sub">What Tio Cheo&#x27;s does, in plain terms. If you need something close to what is listed here but not exactly it, call and ask. That conversation is always welcome.</p><div class="item"><h3>Groups and occasions</h3><p>Bigger orders and group meals handled with a bit of notice, so the food is ready when your people are.</p></div><div class="item"><h3>Made fresh daily</h3><p>The kitchen works from fresh ingredients prepped through the day, so what reaches the table tastes like it was meant to.</p></div><div class="item"><h3>Family friendly tables</h3><p>Room for the whole family, food that suits different tastes at one table, and service that keeps things easy.</p></div><div class="item"><h3>Takeout and call ahead</h3><p>Call ahead and your order is packed and waiting, hot and complete, instead of you waiting on it.</p></div></section>
+<section class="page" id="about"><h2 class="page-title">About</h2><p class="sub">Tio Cheo&#x27;s is a place to eat based in Madison, WI. The work is caterers for the people and businesses of this area, done locally, by people who live with the reputation it earns them.</p><p class="sub">The approach here is straightforward. Things are explained in plain words, arrangements are kept, and people are treated the way the people here would want their own family treated.</p><p class="sub">Most people arrive by recommendation, or because they pass by and come in. However you found Tio Cheo&#x27;s, the aim is the same: that you leave knowing you were looked after properly, and that you would come back without thinking twice.</p></section>
+<section class="page" id="visit"><h2 class="page-title">Visit</h2><p class="addr">514 S Park St, Madison, WI 53715</p><p class="sub">Directions in the menu will bring you straight here. We are glad to see walk ins and appointments alike.</p><a class="call" href="tel:+12627448160">Call (262) 744-8160</a></section>
+</main>
+<footer>© Tio Cheo&#x27;s</footer>
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.toggle('on', p.id === id); });
+  document.querySelectorAll('[data-nav]').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-nav') === id); });
+  var m = document.getElementById('menu'); if(m) m.classList.remove('open');
+  var bb = document.getElementById('backbtn'); if(bb) bb.classList.toggle('show', id !== 'home');
+  var hm = document.getElementById('homemenu'); if(hm) hm.style.display = (id === 'home') ? '' : 'none';
+  window.scrollTo(0, 0);
+}
+function toggleMenu(){ var m = document.getElementById('menu'); if(m) m.classList.toggle('open'); }
+document.addEventListener('click', function(e){
+  var d = document.querySelector('.drop.open');
+  if(d && !e.target.closest('.drop') && !e.target.closest('.dotsbtn')) d.classList.remove('open');
+});
+</script>
+</body>
+</html>

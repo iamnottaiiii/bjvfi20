@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nextgen Technology Services, Vienna, VA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* sticky-footer-fix-v1 */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Merriweather',Georgia,serif;background:#f3f5f7;color:#232a31;min-height:100dvh;display:flex;flex-direction:column}
+.bg2{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg2 svg{width:100%;height:100%;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes rise{0%{transform:translateY(0)}100%{transform:translateY(-46px)}}
+@keyframes flow{to{stroke-dashoffset:-160}}
+.anim-spin{animation:spin 110s linear infinite}
+.anim-drift{animation:drift 9s ease-in-out infinite}
+.anim-rise{animation:rise 7s ease-in-out infinite alternate}
+.anim-flow{animation:flow 9s linear infinite}
+main{flex:1;width:100%;max-width:1060px;margin:0 auto;padding:30px 22px 44px}
+.page{display:none}.page.on{display:block}
+.hero h1{font-family:'Oswald',Georgia,serif;font-weight:600;font-size:clamp(31px,6vw,48px);line-height:1.16;color:#232a31;max-width:720px}
+.hero p{font-size:16.5px;line-height:1.7;color:#232a31;opacity:.86;margin-top:16px;max-width:680px}
+.tagline{font-size:13.5px;letter-spacing:2.5px;color:#8494a5;text-transform:uppercase;margin-bottom:14px}
+.call{display:inline-block;margin-top:24px;background:#3f6391;color:#fff;font-size:17px;padding:13px 26px;border-radius:9px;text-decoration:none}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:40px}
+.cols h3{font-family:'Oswald',Georgia,serif;font-size:20px;color:#3f6391;margin-bottom:8px}
+.cols p{font-size:15.5px;line-height:1.65;color:#232a31;opacity:.84}
+h2.page-title{font-family:'Oswald',Georgia,serif;font-weight:600;font-size:clamp(27px,4.6vw,38px);color:#232a31;margin-top:10px}
+.sub{font-size:16.5px;line-height:1.7;color:#232a31;opacity:.86;max-width:660px;margin-top:10px}
+.item{padding:18px 0;max-width:720px}
+.item h3{font-size:17.5px;margin-bottom:5px;color:#232a31}
+.item p{font-size:15.5px;line-height:1.65;color:#232a31;opacity:.84}
+.addr{font-size:clamp(19px,3vw,25px);line-height:1.6;margin-top:18px}
+.steps{counter-reset:st;max-width:680px;margin-top:8px}
+.steps li{list-style:none;font-size:16px;line-height:1.65;color:#232a31;opacity:.88;padding:12px 0 12px 6px}
+footer{margin-top:auto;text-align:center;padding:20px 10px 24px;font-size:13.5px;color:#8494a5}.burger{position:fixed;top:14px;right:14px;z-index:40;width:46px;height:46px;border-radius:12px;border:none;background:#3f6391;color:#fff;font-size:21px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.2)}.drawerwrap{position:fixed;inset:0;z-index:39;display:none}.drawerwrap.open{display:block}.drawer-bg{position:absolute;inset:0;background:rgba(15,12,8,.45)}.drawer{position:absolute;top:0;bottom:0;right:0;width:min(290px,82vw);background:rgba(243,245,247,0.38);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);padding:26px 22px}.drawer button,.drawer a{display:block;width:100%;text-align:left;background:none;border:none;color:#232a31;font-size:18px;padding:13px 4px;cursor:pointer;text-decoration:none}.drawer button.on{color:#3f6391;font-weight:700}
+</style>
+</head>
+<body>
+<div class="bg2"><svg viewBox="0 0 400 840" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#3f6391"><rect x="88" y="240" width="224" height="160" rx="12" stroke-width="7" opacity=".16"/><rect x="88" y="560" width="150" height="104" rx="10" stroke-width="6" opacity=".12"/></g><rect x="176" y="416" width="48" height="14" fill="#3f6391" opacity=".16"/><circle cx="200" cy="150" r="30" fill="#3f6391" opacity=".12"/></svg></div>
+<button class="burger" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="drawerwrap" id="menu"><div class="drawer-bg" onclick="toggleMenu()"></div><div class="drawer"><button type="button" data-nav="home" onclick="go('home')">Home</button><button type="button" data-nav="services" onclick="go('services')">Services</button><button type="button" data-nav="about" onclick="go('about')">About</button><button type="button" data-nav="visit" onclick="go('visit')">Visit</button><a href="https://www.google.com/maps/place/Nextgen+Technology+Services/@38.9150247,-77.2331574,17z/data=!3m1!4b1!4m6!3m5!1s0x89b64afbc7c64c71:0x862a591bcfa3b490!8m2!3d38.9150247!4d-77.2331574!16s%2Fg%2F1tdhmq5j?entry=ttu" target="_blank" rel="noopener">Directions</a></div></div>
+<main>
+<section class="page on" id="home"><p class="tagline">Technology company · Vienna, VA</p><div class="hero"><h1>Other Computer Related Services done properly in Vienna</h1><p>Nextgen Technology Services serves Vienna as a technology company. What brings people in is a warm welcome, straight answers and things done the way they were promised.</p><p>You will find us at 8320 Old Courthouse Rd Ste 200 in Vienna. Walk in during opening hours, or call ahead on (703) 752-6468 if you want something ready, booked or set aside for you.</p><a class="call" href="tel:+17037526468">Call (703) 752-6468</a></div><div class="cols"><div><h3>Advice before you buy</h3><p>Honest guidance on what to purchase and what to skip, from people who do not earn commission on the answer.</p></div><div><h3>Support and troubleshooting</h3><p>Problems diagnosed in plain language and fixed properly, with what went wrong explained so it stays fixed.</p></div><div><h3>Setup and installation</h3><p>New machines, networks and software set up the way they should be, accounts, backups and security included.</p></div></div></section>
+<section class="page" id="services"><h2 class="page-title">Services</h2><p class="sub">What Nextgen Technology Services does, in plain terms. If you need something close to what is listed here but not exactly it, call and ask. That conversation is always welcome.</p><div class="item"><h3>Advice before you buy</h3><p>Honest guidance on what to purchase and what to skip, from people who do not earn commission on the answer.</p></div><div class="item"><h3>Support and troubleshooting</h3><p>Problems diagnosed in plain language and fixed properly, with what went wrong explained so it stays fixed.</p></div><div class="item"><h3>Setup and installation</h3><p>New machines, networks and software set up the way they should be, accounts, backups and security included.</p></div><div class="item"><h3>Business systems</h3><p>The tools a small business actually runs on, chosen sensibly and kept running.</p></div></section>
+<section class="page" id="about"><h2 class="page-title">About</h2><p class="sub">Nextgen Technology Services is a technology company based in Vienna, VA. The work is other computer related services for the people and businesses of this area, done locally, by people who live with the reputation it earns them.</p><p class="sub">The approach here is straightforward. Things are explained in plain words, arrangements are kept, and people are treated the way the people here would want their own family treated.</p><p class="sub">Most people arrive by recommendation, or because they pass by and come in. However you found Nextgen Technology Services, the aim is the same: that you leave knowing you were looked after properly, and that you would come back without thinking twice.</p></section>
+<section class="page" id="visit"><h2 class="page-title">Visit</h2><p class="addr">8320 Old Courthouse Rd Ste 200, Vienna, VA 22182</p><p class="sub">Tap Directions in the menu for the map and the fastest route here.</p><a class="call" href="tel:+17037526468">Call (703) 752-6468</a></section>
+</main>
+<footer>© Nextgen Technology Services</footer>
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.toggle('on', p.id === id); });
+  document.querySelectorAll('[data-nav]').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-nav') === id); });
+  var m = document.getElementById('menu'); if(m) m.classList.remove('open');
+  var bb = document.getElementById('backbtn'); if(bb) bb.classList.toggle('show', id !== 'home');
+  var hm = document.getElementById('homemenu'); if(hm) hm.style.display = (id === 'home') ? '' : 'none';
+  window.scrollTo(0, 0);
+}
+function toggleMenu(){ var m = document.getElementById('menu'); if(m) m.classList.toggle('open'); }
+document.addEventListener('click', function(e){
+  var d = document.querySelector('.drop.open');
+  if(d && !e.target.closest('.drop') && !e.target.closest('.dotsbtn')) d.classList.remove('open');
+});
+</script>
+</body>
+</html>
